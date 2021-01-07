@@ -2,7 +2,6 @@ const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
-
 var engine, world;
 var box1, pig1;
 var backgroundImg,platform;
@@ -74,4 +73,10 @@ function mouseDragged(){
 
 function mouseReleased(){
     slingshot.fly();
+}
+
+function keyPressed(){
+    if(keyCode===32){
+        slingshot.attach(bird.body);
+    }
 }
